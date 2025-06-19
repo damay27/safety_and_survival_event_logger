@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+
+<script src="./event_log.js"></script>
+
+<h1>Safety and Survival Event Logger</h1>
+
+<h3>Mayday Count</h3>
+<div id="mayday_count">0</div>
+<h3>Air Alarm Count</h3>
+<div id="air_alarm_count">0</div>
+
+<button onclick="mayday_button()">Mayday</button>
+<button onclick="air_alarm_button()">Air Alarm</button>
+<label>File Name</label>
+<input type="text" id="name_text_box">
+<button onclick="generate_csv()">Download Data</button>
+
+<small>Programmed by Daniel May<small>
+
