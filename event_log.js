@@ -40,7 +40,9 @@ function generate_csv() {
 	var file_blob = new Blob([csv_string], { type: 'text/plain' });
 	var a = document.createElement('a');
 	a.download = name+".csv";
+	let link = document.createTextNode("CSV Download");
+	a.appendChild(link);
 	a.href = window.URL.createObjectURL(file_blob);
-	window.open(a, "_blank")
+	document.body.appendChild(a)
 }
 
