@@ -38,11 +38,9 @@ function generate_csv() {
 	console.log(csv_string)
 
 	var file_blob = new Blob([csv_string], { type: 'text/plain' });
-	var a = document.createElement('a');
-	a.download = name+".csv";
-	let link = document.createTextNode("CSV Download");
-	a.appendChild(link);
-	a.href = window.URL.createObjectURL(file_blob);
-	document.body.appendChild(a)
+	var link = document.getElementById('download_link');
+	link.download = name+".csv";
+	link.href = window.URL.createObjectURL(file_blob);
+	link.innerHTML = "CSV Download"
 }
 

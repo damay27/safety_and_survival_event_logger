@@ -4,18 +4,24 @@
 
 <script src="./event_log.js"></script>
 
-<h1>Safety and Survival Event Logger</h1>
+<style>
+h3 {margin-bottom:0;}
+p {margin-bottom:0;}
+div {margin-bottom:0;}
+</style>
 
-<h3>Mayday Count</h3>
+<h3>Safety and Survival Event Logger</h3>
+<p>Mayday Count</p>
 <div id="mayday_count">0</div>
-<h3>Air Alarm Count</h3>
+<p>Air Alarm Count</p>
 <div id="air_alarm_count">0</div>
 
-<button onclick="mayday_button()">Mayday</button>
-<button onclick="air_alarm_button()">Air Alarm</button>
+<button style="height: 200px;" onclick="mayday_button()">Mayday</button>
+<button style="height: 200px;" onclick="air_alarm_button()">Air Alarm</button>
 <label>File Name</label>
 <input type="text" id="name_text_box">
-<button onclick="generate_csv()">Download Data</button>
+<button onclick="generate_csv()">Generate CSV File</button>
+<a id="download_link"></a>
 
 <small>Programmed by Daniel May<small>
 
