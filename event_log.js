@@ -21,6 +21,7 @@ function air_alarm_button() {
 	console.log(air_alarm_events);
 }
 
+
 function generate_csv() {
 	var name = document.getElementById('name_text_box').value
 	var csv_string = "Mayday,Air Emergency\n"
@@ -40,6 +41,6 @@ function generate_csv() {
 	var a = document.createElement('a');
 	a.download = name+".csv";
 	a.href = window.URL.createObjectURL(file_blob);
-	a.click();
-	location.reload();
+	window.open(a, "_blank")
 }
+
